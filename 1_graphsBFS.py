@@ -1,20 +1,6 @@
-class Graph:
-  def __init__(self, undirected):
-    self.adjlist = {  };
-    self.undir = undirected;
+from graphs import Graph
 
-  def addEdge(self, u, v):
-    if u not in self.adjlist:
-      self.adjlist[u] = [];
-    if v not in self.adjlist:
-      self.adjlist[v] = [];
-
-    self.adjlist[u].append(v);
-    if self.undir:
-      self.adjlist[v].append(u);
-
-  def getAdjList(self):
-    return self.adjlist;
+#Breath First Search - Visiting Adjacent Nodes
 
 def BFS(graph):
   visited = []
@@ -29,18 +15,13 @@ def BFS(graph):
         visited.append(nbr)
         queue.append(nbr)
 
-g = Graph(True);
-g.addEdge(3, 5);
-g.addEdge(5, 6);
-g.addEdge(5, 10);
-g.addEdge(6, 7);
-g.addEdge(6, 9);
-g.addEdge(7, 8);
-g.addEdge(10, 9);
-g.addEdge(9, 8);
-g.addEdge(8, 11);
+g = Graph(True)
+g.addEdge(1,2)
+g.addEdge(2,3)
+g.addEdge(3,4)
+g.addEdge(4,5)
+g.addEdge(5,1)
 
-print(g.adjlist)
 (BFS(g))
 
-#neighbor that is visited but is not our previous
+#cycle is neighbor that is visited but is not our previous

@@ -25,4 +25,3 @@ g.addEdge(4,5)
 g.addEdge(5,1)
 
 
-print(g.adjlist)

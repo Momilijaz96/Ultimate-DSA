@@ -17,12 +17,7 @@ class Graph:
   def getAdjList(self):
     return self.adjlist;
 
-def DFS(graph,visited,elem):
-    print(elem)
-    for n in graph.adjlist[elem]:
-        if n not in visited:
-            visited.append(n)
-            DFS(graph,visited,n)
+
 
 def dfs_cycle(graph,visited,elem,p):
     for n in graph.adjlist[elem]:

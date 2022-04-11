@@ -1,6 +1,6 @@
 from graphs import Graph
 
-#Breath First Search - Visiting Adjacent Nodes
+#Breath First Search - Visiting Adjacent Nodes, graph has just one component
 
 def BFS(graph):
   visited = []

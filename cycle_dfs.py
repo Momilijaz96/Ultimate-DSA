@@ -1,22 +1,5 @@
-import numpy as np
-class Graph:
-  def __init__(self, undirected):
-    self.adjlist = {  };
-    self.undir = undirected;
-
-  def addEdge(self, u, v):
-    if u not in self.adjlist:
-      self.adjlist[u] = [];
-    if v not in self.adjlist:
-      self.adjlist[v] = [];
-
-    self.adjlist[u].append(v);
-    if self.undir:
-      self.adjlist[v].append(u);
-
-  def getAdjList(self):
-    return self.adjlist;
-
+#Problem: Find cycle in a given undirected graph, using DFS. Graph has only one component.
+from graphs import Graph
 
 
 def dfs_cycle(graph,visited,elem,p):

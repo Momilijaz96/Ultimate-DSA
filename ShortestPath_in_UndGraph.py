@@ -6,7 +6,7 @@ def shortest_path(graph,src,n):
     path = [0 for i in range(n)]
     while(len(q) > 0):
         node  = q.pop(0)
-        for k in graph.adjlist[node]:
+        for k in graph[node]:
             if k not in visited and path[k]==0:
                 path[k] = path[k] + path[node] + 1
                 q.append(k)
@@ -32,4 +32,4 @@ if __name__=='__main__':
     g.addEdge(7,8)
     print("Graph: ",g.adjlist)
 
-    print(shortest_path(g,0,9))
+    print(shortest_path(g.adjlist,0,9))

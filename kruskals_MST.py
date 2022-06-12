@@ -48,6 +48,84 @@ def kruskalMST(n, m, graph):
     # Create components out of every node
     node_graph = [Node(i) for i in range(n)]
     dg = disjointSet(n)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    \
     # Sort edges in asc order of weights
     myorder = np.argsort(wts)
     edges = [edges[i] for i in myorder]

@@ -11,5 +11,5 @@ def perm(arr):
             res.append(temp)
     return res
 
-x = [2,4,6,8]
-print(perm(x))
+x = [2,4,6,2]
+print(len(perm(x)))

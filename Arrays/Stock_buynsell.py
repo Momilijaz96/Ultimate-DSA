@@ -1,15 +1,20 @@
-class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        if len(prices)==1:
-            return 0
-        max_profit = 0
-        buy = prices[0]
-        sell = 0
-        for idx,n in enumerate(prices):
-            sell = n
-            curr_profit = sell-buy
-            if curr_profit > max_profit:
-                max_profit  = curr_profit
-            if curr_profit<=0:
-                buy = n
-        return max_profit
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+def maximumProfit(prices):
+    # Write your code here.
+    buy = prices[0]
+    sell = prices[0]
+    profit = sell-buy
+    #Greedily going for small buy and rememebering the max profir
+    for p in prices:
+        if p-buy > profit:
+            sell=p
+            profit = p-buy
+        if p<buy:
+            buy=p
+    return profit
+        
+    return sell-buy

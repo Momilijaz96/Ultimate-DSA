@@ -5,12 +5,14 @@ import cmath
 def findDuplicate(arr:list, n:int):
     # Write your code here.
     # Returns an integer.
-    fmap = {}
-    for a in arr:
-        if a not in fmap:
-            fmap[a] = 1
-        else:
-            return a
+    idx = 0
+    while(idx<n):
+        if arr[idx]==-1:
+            return idx
+        new_idx = arr[idx] 
+        arr[idx] = -1
+        idx = new_idx
+        
 
 
     

@@ -10,7 +10,6 @@ class Solution:
         intervals.sort(key=lambda tup: tup[0])
         
         while(idx<len(intervals)-1):
-            n = len(intervals)-1
             if intervals[idx][1]>=intervals[idx+1][0] and intervals[idx][0]<=intervals[idx+1][1]:
                 intervals[idx][1] = max(intervals[idx][1],intervals[idx+1][1])
                 intervals[idx][0] = min(intervals[idx][0],intervals[idx+1][0])

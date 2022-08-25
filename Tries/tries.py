@@ -7,7 +7,9 @@ class TrieNode:
     def add_child(self,cval):
         self.children[cval] = self.children.get(cval,TrieNode(cval,{}))
         return self.children[cval]
-    
+
+
+
 lw = ['many','man','my','lie','line']
 
 trie = TrieNode()

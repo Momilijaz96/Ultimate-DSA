@@ -1,15 +1,16 @@
 from typing import List
 import numpy as np
-def f_recur(arr,idx,ctar):
-    if ctar==0:
-        return 1
+def f_recur(arr,idx,tar):
     if idx==0:
-        ans = 1 if (arr[0]==ctar) else 0
-        return ans
+        if tar==0 and arr[0]==0: 
+            return 2
+        if tar==0 or arr[0]==tar:
+            return 1
+        return 0
     w = 0
-    if arr[idx]<=ctar:
-        w = f_recur(arr,idx-1,ctar-arr[idx])
-    wo = f_recur(arr,idx-1,ctar)
+    if arr[idx]<=tar:
+        w = f_recur(arr,idx-1,tar-arr[idx])
+    wo = f_recur(arr,idx-1,tar)
     return w+wo
 
 def f_mem(arr,idx,tar,dp):

@@ -12,9 +12,8 @@ def f_rec(arr,idx,x):
     w = float('inf')
 
     if arr[idx]<=x:
-        combs = x//arr[idx]
-        for i in range(1,combs+1): 
-            w = min(i + f_rec(arr,idx-1,x-(i*arr[idx])), w)
+       w = 1+f_mem(arr,idx,x-arr[idx],dp)
+
     return min(w,wo)
 
 def f_mem(arr,idx,x,dp):
